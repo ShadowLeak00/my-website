@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SilentThread Blog | OSINT & Digital Investigations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      font-family: 'Share Tech Mono', monospace;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 3.5rem;
+      text-align: center;
+      background: #1f2833;
+      border-bottom: 1px solid #45a29e;
+      animation: fadeIn 2s ease-out;
+    }
+    .logo {
+      width: 250px;
+      height: 120px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 5px #66fcf1);
+      float: left;
+      border-radius: 10%;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #66fcf1;
+      margin: 0;
+      animation: glitch 2.5s infinite;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #c5c6c7;
+      margin-top: 0.5rem;
+    }
+    nav {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 2rem;
+    }
+    nav a {
+      color: #45a29e;
+      text-decoration: underline;
+      margin: 0 10px;
+      font-size: 2rem;
+    }
+    nav a:hover {
+      color: rgb(247, 247, 168);
+    }
+    .container {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeIn 2s ease-out;
+    }
+    .post {
+      background-color: #1f1f1f;
+      border-left: 4px solid #66fcf1;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
+      transition: all 0.3s ease;
+    }
+    .post:hover {
+      box-shadow: 0 0 20px rgba(102, 252, 241, 0.2);
+      transform: translateY(-5px);
+    }
+    .post h3 {
+      color: #66fcf1;
+    }
+    .post p {
+      color: #c5c6c7;
+      line-height: 1.6;
+    }
+    .post a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    .post a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      border-top: 1px solid #45a29e;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
+      20% { text-shadow: -2px 0 #66fcf1, 2px 2px #0b0c10; }
+      40% { text-shadow: 2px -2px #c5c6c7, -1px 1px #1f2833; }
+      60% { text-shadow: 0 2px #45a29e, 2px 0 #0b0c10; }
+      80% { text-shadow: -2px 2px #66fcf1, 2px -1px #0b0c10; }
+      100% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Capture.PNG" alt="SilentThread Logo" class="logo" />
+    <h1>SilentThread</h1>
+    <div class="tagline">Uncovering intelligence in the noise</div>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Insights & Intelligence</h2>
+
+    <div class="post">
+      <h3>🕵️‍♂️ Mastering Search Engines for OSINT Investigations</h3>
+      <p><em>April 01, 2025</em></p>
+      <p>Search engines are powerful tools for open-source intelligence (OSINT), if you know how to speak their language. From Google to Yandex, here’s how to turn simple searches into deep investigations.</p>
+      <a href="post_01.html">Read More →</a>
+    </div>
+
+    <div class="post">
+      <h3>🔧 Top 5 OSINT Tools You Should Know</h3>
+      <p><em>April 10, 2025</em></p>
+      <p>From automated reconnaissance to dark web analysis, these five tools—Shodan, Maltego, SpiderFoot, Recon-ng, and theHarvester—empower your digital investigations.</p>
+      <a href="#">Read More →</a>
+    </div>
+
+    <div class="post">
+      <h3>⚠️ How Threat Monitoring Protects Your Brand</h3>
+      <p><em>April 2, 2025</em></p>
+      <p>Real-time monitoring is no longer optional. Learn how businesses use AI-driven analytics to stay ahead of misinformation, phishing campaigns, and coordinated attacks.</p>
+      <a href="#">Read More →</a>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2025 SilentThread. All rights reserved.
+  </footer>
+</body>
+</html>
