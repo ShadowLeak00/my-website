@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SilentThread Blog | Background Search Tools</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      font-family: 'Share Tech Mono', monospace;
+    }
+    header {
+      padding: 3.5rem;
+      text-align: center;
+      background: #1f2833;
+      border-bottom: 1px solid #45a29e;
+      animation: fadeIn 2s ease-out;
+    }
+    .logo {
+      width: 250px;
+      height: 100px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 5px #66fcf1);
+      float: left;
+      border-radius: 10%;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #66fcf1;
+      margin: 0;
+      animation: glitch 2.5s infinite;
+    }
+    h3 {
+      font-size: 2rem;
+      color: #cbe45f;
+      margin-bottom: 1rem;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #c5c6c7;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: #45a29e;
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+    nav{
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 2rem;
+    }
+    nav a:hover{
+      color: rgb(247, 247, 168);
+    }
+    .content {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .post {
+      background-color: #1f1f1f;
+      border-left: 4px solid #66fcf1;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
+    }
+    .post p, .post li {
+      color: #c5c6c7;
+      line-height: 1.6;
+    }
+    .post a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    .post a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      border-top: 1px solid #45a29e;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
+      20% { text-shadow: -2px 0 #66fcf1, 2px 2px #0b0c10; }
+      40% { text-shadow: 2px -2px #c5c6c7, -1px 1px #1f2833; }
+      60% { text-shadow: 0 2px #45a29e, 2px 0 #0b0c10; }
+      80% { text-shadow: -2px 2px #66fcf1, 2px -1px #0b0c10; }
+      100% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .logo {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+        width: 180px;
+        height: auto;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .tagline {
+        font-size: 1rem;
+      }
+      nav {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      nav a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.3rem 0;
+      }
+      .content {
+        padding: 2rem 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .tagline {
+        font-size: 0.9rem;
+      }
+      nav {
+        font-size: 1rem;
+      }
+      .post {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Capture.PNG" alt="SilentThread Logo" class="logo" />
+    <h1>SilentThread</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="post">
+      <h3>🕵️ Background Search Tools for OSINT</h3>
+      <p><em style="color:#00ffcc;">April 15, 2025</em></p>
+
+      <p>Background research is a key part of any OSINT investigation. Whether you're building a timeline or verifying someone's digital past, these resources are essential.</p>
+
+      <h4>1️⃣ Google Groups</h4>
+      <ul>
+        <li>URL: <a href="https://groups.google.com" target="_blank">groups.google.com</a></li>
+        <li>Access both Usenet and Google Groups dating back to 1981.</li>
+        <li>Search real names, screen names, or emails to discover historical conversations.</li>
+        <li>Useful for finding forgotten digital footprints and older email addresses.</li>
+      </ul>
+
+      <h4>2️⃣ Google News Archive</h4>
+      <ul>
+        <li>URL: <a href="https://news.google.com" target="_blank">news.google.com</a></li>
+        <li>Offers modern and older news article search functionality across thousands of publishers.</li>
+      </ul>
+
+      <h4>3️⃣ Newspaper Archive</h4>
+      <ul>
+        <li>URL: <a href="https://newspaperarchive.com" target="_blank">newspaperarchive.com</a></li>
+        <li>Subscription-based service with the largest collection of high-resolution PDF newspapers.</li>
+        <li>Archives from the 1800s to present day.</li>
+      </ul>
+
+      <h4>4️⃣ Old Fulton History</h4>
+      <ul>
+        <li>URL: <a href="https://fultonhistory.com/Fulton.html" target="_blank">fultonhistory.com</a></li>
+        <li>Access over 34 million scanned historical newspapers from the US and Canada.</li>
+        <li>Free to use and includes powerful keyword searching.</li>
+      </ul>
+
+      <h4>5️⃣ Library of Congress News Archive</h4>
+      <ul>
+        <li>Chronology Access: <a href="https://chroniclingamerica.loc.gov" target="_blank">chroniclingamerica.loc.gov</a></li>
+        <li>Title Search: <a href="https://chroniclingamerica.loc.gov/search/titles" target="_blank">search/titles</a></li>
+        <li>Contains digitized U.S. newspapers dating from 1690 to present.</li>
+        <li>Great for deep historical research and local event investigations.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SilentThread. All rights reserved.</p>
+  </footer>
+</body>
+</html>

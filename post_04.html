@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SilentThread Blog | Facebook OSINT Techniques</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      font-family: 'Share Tech Mono', monospace;
+    }
+    header {
+      padding: 3.5rem;
+      text-align: center;
+      background: #1f2833;
+      border-bottom: 1px solid #45a29e;
+      animation: fadeIn 2s ease-out;
+    }
+    .logo {
+      width: 250px;
+      height: 100px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 5px #66fcf1);
+      float: left;
+      border-radius: 10%;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #66fcf1;
+      margin: 0;
+      animation: glitch 2.5s infinite;
+    }
+    h3 {
+      font-size: 2rem;
+      color: #cbe45f;
+      margin-bottom: 1rem;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #c5c6c7;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: #45a29e;
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+    nav{
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 2rem;
+    }
+    nav a:hover{
+      color: rgb(247, 247, 168);
+    }
+    .content {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .post {
+      background-color: #1f1f1f;
+      border-left: 4px solid #66fcf1;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
+    }
+    .post p, .post li {
+      color: #c5c6c7;
+      line-height: 1.6;
+    }
+    .post a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    .post a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      border-top: 1px solid #45a29e;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
+      20% { text-shadow: -2px 0 #66fcf1, 2px 2px #0b0c10; }
+      40% { text-shadow: 2px -2px #c5c6c7, -1px 1px #1f2833; }
+      60% { text-shadow: 0 2px #45a29e, 2px 0 #0b0c10; }
+      80% { text-shadow: -2px 2px #66fcf1, 2px -1px #0b0c10; }
+      100% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .logo {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+        width: 180px;
+        height: auto;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .tagline {
+        font-size: 1rem;
+      }
+      nav {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      nav a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.3rem 0;
+      }
+      .content {
+        padding: 2rem 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .tagline {
+        font-size: 0.9rem;
+      }
+      nav {
+        font-size: 1rem;
+      }
+      .post {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Capture.PNG" alt="SilentThread Logo" class="logo" />
+    <h1>SilentThread</h1>
+    <div class="tagline">Uncovering intelligence in the noise</div>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="post">
+      <h3>📘 Facebook OSINT: Investigation & Exploitation</h3>
+      <p><em style="color:#00ffcc;">April 08, 2025</em></p>
+
+      <h4>🔎 Finding Facebook IDs</h4>
+      <ul>
+        <li>Use tools like <a href="https://lookup-id.com/" target="_blank">lookup-id.com</a>, <a href="https://findidfb.com/" target="_blank">findidfb.com</a>, or <a href="https://Eb-search.com/find-my-facebook-id" target="_blank">Eb-search</a>.</li>
+        <li>View page source → Search for <code>userID</code>, <code>pageID</code>, <code>groupID</code>, or <code>eventID</code>.</li>
+        <li>Click on a photo and decode the base64 portion of the URL.</li>
+      </ul>
+
+      <h4>📋 Export & Organize Friend Lists</h4>
+      <p>Paste friend links into Excel. Use filter tools to sort by color or hyperlink.</p>
+      <p>In Excel, go to: <code>Find & Select > Go To Special > Objects > Delete</code> → removes images. Paste friend links into Column A and clear text formatting.</p>
+
+      <h4>📸 Screenshot & Record Evidence</h4>
+      <p>Take screenshots of all content and interactions visible on the profile.</p>
+
+      <h4>📧 Recover Info via "Forgot Password"</h4>
+      <p>Go to: <a href="https://mbasic.facebook.com/login/identify/?ctx=recover" target="_blank">Facebook Account Recovery</a> → may show partial email/phone data.</p>
+
+      <h4>🔍 Search Comments & Mentions</h4>
+      <p>Google Dork Example: <code>"kaveesha nethmini" site:facebook.com inurl:posts</code></p>
+
+      <h4>🧩 Username Checks & Activity Review</h4>
+      <ul>
+        <li>Check username availability and cross-platform reuse.</li>
+        <li>Review their posts, tags, reactions, and pages followed.</li>
+      </ul>
+
+      <h4>🧠 Email Identification: Page Role Trick</h4>
+      <ol>
+        <li>Log into a covert Facebook profile and create a page.</li>
+        <li>Go to: <strong>Settings > Page Roles</strong></li>
+        <li>Enter the target's email → Facebook will show a name if linked.</li>
+        <li>Cancel without sending the invite.</li>
+      </ol>
+
+      <h4>📚 Profile Content Deep Links</h4>
+      <ul class="three-column-list">
+        <li><a href="https://www.facebook.com/zuck">Timeline</a></li>
+        <li><a href="https://www.facebook.com/zuck/about">About</a></li>
+        <li><a href="https://www.facebook.com/zuck/about?section=work">Employment</a></li>
+        <li><a href="https://www.facebook.com/zuck/about?section=education">Education</a></li>
+        <li><a href="https://www.facebook.com/zuck/about?section=living">Location</a></li>
+        <li><a href="https://www.facebook.com/zuck/about?section=basic-info">Basic Info</a></li>
+        <li><a href="https://www.facebook.com/zuck/about?section=contact-info">Contact Info</a></li>
+        <li><a href="https://www.facebook.com/zuck/about?section=relationship">Relationships</a></li>
+        <li><a href="https://www.facebook.com/zuck/about?section=family">Family</a></li>
+        <li><a href="https://www.facebook.com/zuck/about?section=bio">Bio</a></li>
+        <li><a href="https://www.facebook.com/zuck/about?section=year-overviews">Life Events</a></li>
+        <li><a href="https://www.facebook.com/zuck/photos">Profile Photos</a></li>
+        <li><a href="https://www.facebook.com/zuck/friends">Friends</a></li>
+        <li><a href="https://www.facebook.com/zuck/photos">Photos</a></li>
+        <li><a href="https://www.facebook.com/zuck/places_visited">Check-Ins</a></li>
+        <li><a href="https://www.facebook.com/zuck/places_recent">Recent Check-Ins</a></li>
+        <li><a href="https://www.facebook.com/zuck/sports">Sports</a></li>
+        <li><a href="https://www.facebook.com/zuck/music">Music</a></li>
+        <li><a href="https://www.facebook.com/zuck/movies">Movies</a></li>
+        <li><a href="https://www.facebook.com/zuck/tv">TV Shows</a></li>
+        <li><a href="https://www.facebook.com/zuck/videos">Videos</a></li>
+        <li><a href="https://www.facebook.com/zuck/likes">Likes</a></li>
+        <li><a href="https://www.facebook.com/zuck/books">Books</a></li>
+        <li><a href="https://www.facebook.com/zuck/games">Apps and Games</a></li>
+        <li><a href="https://www.facebook.com/zuck/did_you_know">Facts</a></li>
+        <li><a href="https://www.facebook.com/zuck/reviews">Reviews</a></li>
+        <li><a href="https://www.facebook.com/zuck/events">Events</a></li>
+        <li><a href="https://www.facebook.com/zuck/notes">Notes</a></li>
+      </ul>
+
+      <h4>🔍 Facebook Keyword Search</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/search/top/?q=osint" target="_blank">All</a></li>
+        <li><a href="https://www.facebook.com/search/posts/?q=osint" target="_blank">Posts</a></li>
+        <li><a href="https://www.facebook.com/search/people/?q=osint" target="_blank">People</a></li>
+        <li><a href="https://www.facebook.com/search/photos/?q=osint" target="_blank">Photos</a></li>
+        <li><a href="https://www.facebook.com/search/videos/?q=osint" target="_blank">Videos</a></li>
+        <li><a href="https://www.facebook.com/search/marketplace/?q=osint" target="_blank">Marketplace</a></li>
+        <li><a href="https://www.facebook.com/search/pages/?q=osint" target="_blank">Pages</a></li>
+        <li><a href="https://www.facebook.com/search/places/?q=osint" target="_blank">Places</a></li>
+        <li><a href="https://www.facebook.com/search/groups/?q=osint" target="_blank">Groups</a></li>
+        <li><a href="https://www.facebook.com/search/apps/?q=osint" target="_blank">Apps</a></li>
+        <li><a href="https://www.facebook.com/search/events/?q=osint" target="_blank">Events</a></li>
+        <li><a href="https://www.facebook.com/search/links/?q=osint" target="_blank">Links</a></li>
+      </ul>      
+
+      <h4>🧠 Advanced Search Options</h4>
+      <ul class="advanced-search">
+        <li><strong>Posts by User/Year:</strong> Posts by a specific user on any page (filtered by year)</li>
+        <li><strong>Photos by User/Year:</strong> Photos by a specific user on any page (filtered by year)</li>
+        <li><strong>Videos by User/Year:</strong> Videos by a specific user on any page (filtered by year)</li>
+        <li><strong>Posts by Location/Year:</strong> Posts submitted from a specific location (filtered by year)</li>
+        <li><strong>Photos by Location/Year:</strong> Photos submitted from a specific location (filtered by year)</li>
+        <li><strong>Videos by Location/Year:</strong> Videos submitted from a specific location (filtered by year)</li>
+        <li><strong>Posts by Keyword/Year:</strong> Posts matching a search term (filtered by year)</li>
+        <li><strong>Photos by Keyword/Year:</strong> Photos matching a search term (filtered by year)</li>
+        <li><strong>Videos by Keyword/Year:</strong> Videos matching a search term (filtered by year)</li>
+        <li><strong>Events by Location:</strong> Current and upcoming events by location (city or entity)</li>
+        <li><strong>Profiles by Employer:</strong> Profiles associated with employees of a specific business</li>
+        <li><strong>Profiles by Location:</strong> Profiles associated with residents of a specific city</li>
+        <li><strong>Profiles by School:</strong> Profiles associated with students of a specific school</li>
+        <li><strong>Common Friends:</strong> Common profiles which are friends with two targets</li>
+        <li><strong>Posts by Date:</strong> Posts by keyword (filtered by date range)</li>
+        <li><strong>Photos by Date:</strong> Photos by keyword (filtered by date range)</li>
+        <li><strong>Videos by Date:</strong> Videos by keyword (filtered by date range)</li>
+      </ul>
+      
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 SilentThread. All rights reserved.
+  </footer>
+</body>
+</html>

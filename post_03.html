@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SilentThread Blog | Building a Sock Puppet Identity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      font-family: 'Share Tech Mono', monospace;
+    }
+    header {
+      padding: 3.5rem;
+      text-align: center;
+      background: #1f2833;
+      border-bottom: 1px solid #45a29e;
+      animation: fadeIn 2s ease-out;
+    }
+    .logo {
+      width: 250px;
+      height: 100px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 5px #66fcf1);
+      float: left;
+      border-radius: 10%;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #66fcf1;
+      margin: 0;
+      animation: glitch 2.5s infinite;
+    }
+    h3 {
+      font-size: 2rem;
+      color: #cbe45f;
+      margin-bottom: 1rem;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #c5c6c7;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: #45a29e;
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+    nav{
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 2rem;
+    }
+    nav a:hover{
+      color: rgb(247, 247, 168);
+    }
+    .content {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .post {
+      background-color: #1f1f1f;
+      border-left: 4px solid #66fcf1;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(102, 252, 241, 0.1);
+    }
+    .post p, .post li {
+      color: #c5c6c7;
+      line-height: 1.6;
+    }
+    .post a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    .post a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      border-top: 1px solid #45a29e;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
+      20% { text-shadow: -2px 0 #66fcf1, 2px 2px #0b0c10; }
+      40% { text-shadow: 2px -2px #c5c6c7, -1px 1px #1f2833; }
+      60% { text-shadow: 0 2px #45a29e, 2px 0 #0b0c10; }
+      80% { text-shadow: -2px 2px #66fcf1, 2px -1px #0b0c10; }
+      100% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .logo {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+        width: 180px;
+        height: auto;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .tagline {
+        font-size: 1rem;
+      }
+      nav {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      nav a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.3rem 0;
+      }
+      .content {
+        padding: 2rem 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .tagline {
+        font-size: 0.9rem;
+      }
+      nav {
+        font-size: 1rem;
+      }
+      .post {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Capture.PNG" alt="SilentThread Logo" class="logo" />
+    <h1>SilentThread</h1>
+    <div class="tagline">Uncovering intelligence in the noise</div>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="blog.html">Blog</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="post">
+      <h3>🕵️ Building a Sock Puppet Identity for OSINT</h3>
+      <p><em style="color:#00ffcc;">April 07, 2025</em></p>
+      <p>Creating a realistic and secure sock puppet identity is a key step in operational security and online investigations. Here's how to build, maintain, and dispose of a fake identity safely.</p>
+
+      <h4>⚠️ Cleanup After Each Mission</h4>
+      <p>Always delete your VM or sandbox environment after completing an investigation to eliminate traces.</p>
+
+      <h4>🧪 Identity Creation Toolkit</h4>
+      <ul>
+        <li><a href="https://www.fakenamegenerator.com/" target="_blank">Fake Name Generator</a>: Generate realistic personas with addresses, jobs, etc.</li>
+        <li><a href="https://thispersondoesnotexist.com/" target="_blank">ThisPersonDoesNotExist</a>: AI-generated realistic profile photos.</li>
+        <li><a href="https://pixabay.com/" target="_blank">Pixabay</a> / <a href="https://www.pexels.com/" target="_blank">Pexels</a>: Get free images to fill out profiles.</li>
+      </ul>
+
+      <h4>🧱 Step-by-Step Sock Puppet Process</h4>
+      <ul>
+        <li><strong>1)</strong> Use a separate virtual machine (VM) or isolated device.</li>
+        <li><strong>2)</strong> Create a fake identity using the tools above.</li>
+        <li><strong>3)</strong> Register an email using <a href="https://www.fastmail.com" target="_blank">Fastmail</a>.</li>
+        <li><strong>4)</strong> Get a burner phone number (e.g. <a href="https://www.lebara.nl/en/home.html" target="_blank">Lebara</a> or SMS services).</li>
+        <li><strong>5)</strong> Connect only using public Wi-Fi (library, cafe, etc.).</li>
+        <li><strong>6)</strong> Create social media accounts (Facebook, Instagram, X/Twitter).</li>
+        <li><strong>7)</strong> Add realistic profile details, likes, and follow relevant pages.</li>
+        <li><strong>8)</strong> Log in at least twice a week to keep the accounts fresh.</li>
+        <li><strong>9)</strong> Apply 2-Factor Authentication (2FA) for additional security.</li>
+      </ul>
+
+      <h4>🛡️ OPSEC Reminders</h4>
+      <p>Never mix real identity logins or data in the VM environment. Avoid using the same IP repeatedly. Rotate Wi-Fi, proxies, or VPNs if available.</p>
+
+      <h4>✅ When Done</h4>
+      <p>Once the investigation is complete, securely delete the virtual machine or wipe the environment. Consider using disk cleaners or tools that erase VMs completely.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 SilentThread. All rights reserved.
+  </footer>
+</body>
+</html>
