@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SilentThread Blog | OSINT & Digital Investigations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0a0f1c;
+      color: #e0f7fa;
+      font-family: 'Share Tech Mono', monospace;
+    }
+
+    header {
+      background-color: #111827;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 2px solid #38bdf8;
+      box-shadow: 0 0 20px #38bdf8aa;
+    }
+
+    .logo {
+      width: 250px;
+      height: 120px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 5px #66fcf1);
+      float: left;
+      border-radius: 10%;
+      margin-left: 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #38bdf8;
+      text-shadow: 0 0 5px #38bdf8;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      padding: 1.5rem;
+      font-size: 1.2rem;
+      background-color: #0f172a;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 2rem;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
+    nav .Active {
+      color: #36af6d;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .nav2 .Active {
+      color: #36af6d;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .nav2 {
+      background-color: #1e293b;
+      padding: 1rem;
+      display: flex;
+      justify-content: flex-start;
+      gap: 2rem;
+      font-size: 1.2rem;
+      border-bottom: 1px solid #64748b;
+      width: 100%;
+    }
+
+    .nav2 a {
+      color: #fcd34d;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-size: 1.2rem;
+    }
+
+    .nav2 a:hover {
+      color: #ef4444;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #f0f9ff;
+      text-shadow: 0 0 5px #38bdf8;
+    }
+
+    .post {
+      background-color: #0f172a;
+      border-left: 4px solid #38bdf8;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .post:hover {
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+      transform: translateY(-5px);
+    }
+
+    .post h3 {
+      color: #38bdf8;
+    }
+
+    .post p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .post a {
+      color: #facc15;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .post a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #64748b;
+      border-top: 1px solid #38bdf8;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav2 {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../Capture.PNG" alt="SilentThread Logo" class="logo" />
+    <h1>SilentThread</h1>
+    <div class="tagline">Uncovering intelligence in the noise</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html" class="Active">Blog</a>
+      <a href="../tools.html">Tools</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <nav class="nav2">
+      <a href="../blog.html" >OSINT Notes</a>
+      <a href="#" class="Active">Bash scripting Notes</a>
+      <a href="../tools.html">Tools</a>
+    </nav>
+
+    <h2>Welcome to Bash Scripting</h2>
+
+    <div class="post">
+      <h3>Chapter 01: Bash Scripting Essentials</h3>
+      <p><em>April 20, 2025</em></p>
+      <p>Check the version of Bash installed on your system.</p>
+      <a href="chapter_01.html">Read More →</a>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2025 SilentThread. All rights reserved.
+  </footer>
+</body>
+</html>
