@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge 5 - Login Bypass</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="terminal">
+    <h2>Challenge 5: Login Bypass</h2>
+    <p>NovaCore engineers left a login page unprotected. Can you trick it into giving up the flag?</p>
+    <form onsubmit="return validateLogin()">
+      <input type="text" id="user" placeholder="Username"><br>
+      <input type="password" id="pass" placeholder="Password"><br>
+      <button type="submit">Login</button>
+    </form>
+    <p id="loginResult"></p>
+    <button><a href="../submit.html">Submit Flags</a></button>
+    <button><a href="../index.html" style="color: rgb(247, 247, 240);">Back to challenges</a></button>
+  </div>
+
+  <script>
+    function validateLogin() {
+      const u = document.getElementById("user").value;
+      const p = document.getElementById("pass").value;
+      const result = document.getElementById("loginResult");
+
+      // Vulnerable login logic
+      if (u === "admin" || p === "admin") {
+        result.innerText = "Access granted. FLAG{BYPASS_SUCCESS}";
+      } else {
+        result.innerText = "Access denied.";
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>

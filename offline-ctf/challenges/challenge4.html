@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge 4 - JS Logic</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="terminal">
+    <h2>Challenge 4: JavaScript Secrets</h2>
+    <p>This flag is locked behind some client-side logic. Can you reverse engineer it?</p>
+    <input type="text" id="codeInput" placeholder="Enter passcode">
+    <button onclick="validate()">Try</button>
+    <p id="feedback"></p>
+    <button><a href="../submit.html">Submit Flags</a></button>
+    <button><a href="../index.html" style="color: rgb(247, 247, 240);">Back to challenges</a></button>
+  </div>
+
+  <script>
+    function validate() {
+      const input = document.getElementById("codeInput").value.trim();
+      const secret = atob("RkxBR3tKUzNfUlZfU1VDQ0VTU30="); // FLAG{JS3_RV_SUCCESS}
+      document.getElementById("feedback").innerText =
+        (input === "letmein123") ? `Correct! The flag is: ${secret}` : "Wrong passcode.";
+    }
+  </script>
+</body>
+</html>
