@@ -5,7 +5,14 @@ body {
   padding: 20px;
       font-size: 1.2rem;
 }
-
+nav{
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 2rem;
+}
+nav a:hover{
+  color: rgb(247, 247, 168);
+}
 a {
   color: #00ddee;
   text-decoration: none;
