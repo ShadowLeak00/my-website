@@ -1,252 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SilentThread | OSINT & Digital Investigations</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <style>
-    body {
-      margin: 0;
-      background-color: #0b0c10;
-      color: #c5c6c7;
-      font-family: 'Share Tech Mono', monospace;
-      overflow-x: hidden;
-    }
-    header {
-      padding: 3.5rem;
-      text-align: center;
-      background: #1f2833;
-      border-bottom: 1px solid #45a29e;
-      animation: fadeIn 2s ease-out;
-    }
-    .logo {
-      width: 250px;
-      height: 100px;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 0 5px #66fcf1);
-      float: left;
-      border-radius: 10%;
-    }
-    nav .Active {
-      color: #f43f5e;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-    .nav2 .Active {
-      color: #f43f5e;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-    h1 {
-      font-size: 2rem;
-      color: #66fcf1;
-      margin: 0;
-      animation: glitch 2.5s infinite;
-    }
-    .tagline {
-      font-size: 1.2rem;
-      color: #c5c6c7;
-      margin-top: 0.5rem;
-    }
-    .content {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
-      animation: fadeIn 2s ease-out;
-    }
-    .section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      color: #66fcf1;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    .contact {
-      background: #1f2833;
-      padding: 2rem;
-      border-radius: 10px;
-    }
-    .contact p {
-      margin-bottom: 1rem;
-    }
-    a {
-      color: #45a29e;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      color: #7f8c8d;
-    }
-    .nav{
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 2rem;
-    }
-    nav a:hover{
-      color: rgb(247, 247, 168);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes glitch {
-      0% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
-      20% { text-shadow: -2px 0 #66fcf1, 2px 2px #0b0c10; }
-      40% { text-shadow: 2px -2px #c5c6c7, -1px 1px #1f2833; }
-      60% { text-shadow: 0 2px #45a29e, 2px 0 #0b0c10; }
-      80% { text-shadow: -2px 2px #66fcf1, 2px -1px #0b0c10; }
-      100% { text-shadow: 2px 2px #45a29e, -2px -2px #1f2833; }
-    }
-    form {
-      margin-top: 1rem;
-    }
-    input, textarea {
-      width: 100%;
-      background-color: #0b0c10;
-      border: 1px solid #45a29e;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      color: #c5c6c7;
-      font-family: 'Share Tech Mono', monospace;
-    }
-    button {
-      background: #45a29e;
-      color: #0b0c10;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      cursor: pointer;
-      font-family: 'Share Tech Mono', monospace;
-    }
-    @media (max-width: 768px) {
-  header {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  .logo {
-    float: none;
-    display: block;
-    margin: 0 auto 1rem;
-    width: 180px;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 2rem !important;
-  }
-
-  .tagline {
-    font-size: 1rem;
-  }
-
-  .content {
-    padding: 2rem 1rem;
-  }
-
-  nav.nav {
-    font-size: 1rem;
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  nav.nav a {
-    display: block;
-    padding: 0.3rem 0;
-  }
-
-  input, textarea {
-    font-size: 1rem;
-  }
-
-  button {
-    width: 100%;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem !important;
-  }
-
-  .tagline {
-    font-size: 0.9rem;
-  }
-
-  nav.nav {
-    font-size: 0.95rem;
-  }
-
-  .section {
-    margin-bottom: 2rem;
-  }
-}
-  </style>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShadowFinder – Digital Security & Web Services</title>
+    <meta name="description"
+        content="ShadowFinder offers digital security services, business email setups, websites, and cyber hygiene kits for individuals and small businesses in Sri Lanka." />
+    <meta name="keywords"
+        content="cybersecurity, digital security, domain email, website setup, ShadowFinder, Sri Lanka" />
+    <meta name="author" content="ShadowFinder" />
 </head>
+
 <body>
-  <header>
-    <img src="Capture.PNG" alt="SilentThread Logo" class="logo" />
-    <h1 style="font-size: 3rem;">SilentThread</h1>
-    <div class="tagline">Uncovering intelligence in the noise</div>
-    <nav class="nav">
-      <a href="index.html" class="Active">Home</a> |
-      <a href="blog.html">Blog</a> |
-      <a href="tools.html">Tools</a> |
-      <a href="offline-ctf/index.html">CTF</a>
-    </nav>
-  </header>
-  <div class="content">
-    <div class="section">
-      <h2>What We Do</h2>
-      <ul>
-        <li>Digital footprint analysis & threat exposure mapping</li>
-        <li>Open-source intelligence (OSINT) collection & reporting</li>
-        <li>Dark web monitoring & data breach discovery</li>
-        <li>Influence network tracing & disinformation analysis</li>
-      </ul>
-    </div>
+    <header>
+        <img src="Secure Home.png" alt="logo"></img>
+        <h1>ShadowFinder – Secure Your Digital Life</h1>
+    </header>
 
-    <div class="section">
-      <h2>Who We Work With</h2>
-      <ul>
-        <li>Journalists & media teams</li>
-        <li>Private investigators & legal professionals</li>
-        <li>Activists & high-risk individuals</li>
-        <li>Security-conscious companies & NGOs</li>
-      </ul>
-    </div>
+    <section
+        style="background-color: #1e1e1e; color: #f2fd93; padding: 3rem 2rem; text-align: center; border-bottom: 2px solid #25D366;">
+        <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">🔎 Do you need expert digital support?</h2>
+        <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">🔐 Are you struggling with online security?</h2>
+        <h1 style="font-size: 2.5rem; margin-top: 1.5rem; color: #25D366;">✅ You’re in the right place.</h1>
+        <p
+            style="margin-top: 1rem; font-size: 1.2rem; color: #e0e0e0; max-width: 700px; margin-left: auto; margin-right: auto;">
+            ShadowFinder isn’t just a service — it’s your cyber ally. From email setups to advanced protection, we bring
+            enterprise-level security to individuals, freelancers, and small businesses in Sri Lanka.
+        </p>
+        <a href="#services"
+            style="display: inline-block; margin-top: 2rem; background-color: #25D366; color: #000; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">Explore
+            Our Services</a>
+    </section>
 
-    <div class="section contact">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:ops@silentthread.online">support@silentthread.online</a></p>
-      <p>Secure Channel Available on Request (PGP / Session)</p>
-      <form action="https://forms.zohopublic.com/yourformlink" method="POST" target="_blank">
-        <input type="text" name="Name" placeholder="Your Name" required>
-        <input type="email" name="Email" placeholder="Your Email" required>
-        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Secure Message</button>
-      </form>
-    </div>
-  </div>
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services">
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Domain + Business Email</h3>
+                        <p>Setup of .com or .lk domain with a custom business email (Zoho).</p>
+                        <p class="price">LKR 9,000 / year</p>
+                        <ul style="margin-top: 1rem;margin-left: 20px;">
+                            <li style="color: #25D366;">🔒 Secure Setup</li>
+                            <li style="color: #25D366;">🧠 Expert Support</li>
+                            <li style="color: #25D366;">⚡ 24-Hour Delivery</li>
+                        </ul>
+                    </div>
+                    <div class="card-back">
+                        <h3>Included:</h3>
+                        <ul>
+                            <li>Domain (.com or .lk)</li>
+                            <li>Zoho email setup</li>
+                            <li>DNS configuration</li>
+                            <li>Setup support</li>
+                        </ul>
+                        <button onclick="event.stopPropagation(); messageWhatsApp('Domain + Business Email')">Request
+                            via WhatsApp</button>
+                    </div>
+                </div>
+            </div>
 
-  <footer>
-    &copy; 2025 SilentThread. All rights reserved.
-  </footer>
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>1-Page Website</h3>
+                        <p>Custom design using WordPress or Carrd with responsive layout.</p>
+                        <p class="price">LKR 12,000 – 20,000</p>
+                        <ul style="margin-top: 1rem;margin-left: 20px;">
+                            <li style="color: #25D366;">🔒 Secure Setup</li>
+                            <li style="color: #25D366;">🧠 Expert Support</li>
+                            <li style="color: #25D366;">⚡ 24-Hour Delivery</li>
+                        </ul>
+                    </div>
+                    <div class="card-back">
+                        <h3>Included:</h3>
+                        <ul>
+                            <li>Responsive layout</li>
+                            <li>SEO optimization</li>
+                            <li>Hosting support</li>
+                            <li>Design support</li>
+                        </ul>
+                        <button onclick="event.stopPropagation(); messageWhatsApp('1-Page Website')">Request via
+                            WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Cyber Hygiene Kit</h3>
+                        <p>Protect accounts and data with password managers, 2FA, and backups.</p>
+                        <p class="price">LKR 3,000 – 5,000</p>
+                        <ul style="margin-top: 1rem;margin-left: 20px;">
+                            <li style="color: #25D366;">🔒 Secure Setup</li>
+                            <li style="color: #25D366;">🧠 Expert Support</li>
+                            <li style="color: #25D366;">⚡ 24-Hour Delivery</li>
+                        </ul>
+                    </div>
+                    <div class="card-back">
+                        <h3>Included:</h3>
+                        <ul>
+                            <li>Password manager setup</li>
+                            <li>2FA configuration</li>
+                            <li>Email & browser security</li>
+                            <li>Privacy training</li>
+                        </ul>
+                        <button onclick="event.stopPropagation(); messageWhatsApp('Cyber Hygiene Kit')">Request via
+                            WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Google & WhatsApp Business</h3>
+                        <p>Set up your Google Map profile and WhatsApp Business properly.</p>
+                        <p class="price">LKR 2,000 – 3,000</p>
+                        <ul style="margin-top: 1rem;margin-left: 20px;">
+                            <li style="color: #25D366;">🔒 Secure Setup</li>
+                            <li style="color: #25D366;">🧠 Expert Support</li>
+                            <li style="color: #25D366;">⚡ 24-Hour Delivery</li>
+                        </ul>
+                    </div>
+                    <div class="card-back">
+                        <h3>Included:</h3>
+                        <ul>
+                            <li>Google My Business setup</li>
+                            <li>WhatsApp catalog, quick replies</li>
+                            <li>Profile optimization</li>
+                            <li>Support included</li>
+                        </ul>
+                        <button onclick="event.stopPropagation(); messageWhatsApp('Google & WhatsApp Business')">Request
+                            via WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Digital Branding Kit</h3>
+                        <p>Logo, fonts, colors, and social media designs for your brand.</p>
+                        <p class="price">LKR 5,000 – 15,000</p>
+                        <ul style="margin-top: 1rem;margin-left: 20px;">
+                            <li style="color: #25D366;">🔒 Secure Setup</li>
+                            <li style="color: #25D366;">🧠 Expert Support</li>
+                            <li style="color: #25D366;">⚡ 24-Hour Delivery</li>
+                        </ul>
+                    </div>
+                    <div class="card-back">
+                        <h3>Included:</h3>
+                        <ul>
+                            <li>Logo design</li>
+                            <li>Color + font palette</li>
+                            <li>Social media assets</li>
+                            <li>Editable files</li>
+                        </ul>
+                        <button onclick="event.stopPropagation(); messageWhatsApp('Digital Branding Kit')">Request via
+                            WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="service-section-title">Why ShadowFinder Is the Most Secure Choice</h2>
+        <div class="service-description">
+                <h4>✅ Enterprise-Grade Protection</h4>
+                <p>We use encrypted communication channels, secure DNS, and validated best practices to keep your data
+                    private and untouchable.</p>
+
+                <h4>🛡️ Cyber Hygiene Certified</h4>
+                <p>Every package includes expert configuration of password managers, 2FA, and email security tools,
+                    ensuring you're safe from phishing, leaks, and social engineering.</p>
+                <h4>🧠 Human Support, Fast Response</h4>
+                <p>No bots. No call queues. Direct WhatsApp-based expert support when you need it most.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="reviews">
+            <div class="review-card">
+                <h4>Rajiv S.</h4>
+                <div class="stars">★★★★★</div>
+                <p>"Excellent and quick service! My domain and email were ready in one day. Highly recommend
+                    ShadowFinder."</p>
+            </div>
+            <div class="review-card">
+                <h4>Malsha D.</h4>
+                <div class="stars">★★★★★</div>
+                <p>"Their Cyber Hygiene kit helped me secure all my accounts. I had no idea how vulnerable I was. Great
+                    service!"</p>
+            </div>
+            <div class="review-card">
+                <h4>Nuwan P.</h4>
+                <div class="stars">★★★★☆</div>
+                <p>"Professional and patient with all my tech questions. Got my Google listing and WhatsApp setup
+                    perfectly."</p>
+            </div>
+            <div class="review-card">
+                <h4>Dinuli R.</h4>
+                <div class="stars">★★★★★</div>
+                <p>"Loved the branding kit they made for my shop. Clean, modern, and perfect colors!"</p>
+            </div>
+            <div class="review-card">
+                <h4>Sachin L.</h4>
+                <div class="stars">★★★★☆</div>
+                <p>"Responsive design and SEO were on point. My website loads fast and looks great on mobile."</p>
+            </div>
+        </div>
+    </section>
+    <section style="text-align:center; padding:2rem;">
+        <h2 style="color: #f2fd93;font-size: 2.6rem;">🎁 Free Bonus for New Clients</h2>
+        <p>Get a downloadable <strong>“Cyber Hygiene Starter Pack PDF”</strong> when you book any service today.</p>
+        <a href="https://wa.me/94771234567?text=I'm%20ready%20to%20book%20and%20claim%20the%20Cyber%20Hygiene%20bonus!"
+            style="background:#0c5e2a;color:white;padding:12px 20px;border-radius:6px;text-decoration:none;display:inline-block;margin-top:1rem;">
+            💬 Book Now & Claim Bonus
+        </a>
+    </section>
+
+
+    <a class="whatsapp-button" href="https://wa.me/94719779395" target="_blank" title="Chat with us on WhatsApp">💬</a>
+
+    <footer>
+        <p>&copy; 2025 ShadowFinder. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
+
 </html>

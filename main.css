@@ -1,0 +1,174 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #000;
+      color: #f2fd93;
+      padding: 2rem 2rem;
+      text-align: center;
+      display: flex;
+      border-bottom: 2px solid #a0a0a0;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      align-items: center;
+      justify-content: center;
+      margin-left: 50px;
+      margin-top: 60px;
+    }
+    header img{
+        width: 170px;
+        height: 170px;
+        margin-left: 100px;
+    }
+    section {
+      padding: 2rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #c0f78d;
+      margin-left: 40px;
+    }
+    .services{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+      background-color: #969696;
+      height: 750px;
+      padding: 1.5rem;
+    } 
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+      background-color: #969696;
+      height: 450px;
+      padding: 1.5rem;
+    }
+    .card {
+      background: transparent;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      backface-visibility: hidden;
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    .card-back {
+      transform: rotateY(180deg);
+    }
+    .card h3{
+      color: rgb(236, 72, 22);
+      font-size: 1.5rem;
+      padding-bottom: 25px;
+    }
+    .card p, .card .price {
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+    .card-front .price {
+      color: #1099e9 !important;
+      font-weight: bold;
+    }
+    .card-back ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+    }
+    .card-back button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #25D366;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .service-section-title{
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      display: flex;
+      margin-top: 150px;
+    }
+    .service-description{
+      background-color: transparent;
+      color: rgb(245, 247, 164);
+      padding: 2rem;
+      margin-bottom: 150px;
+    }
+    .service-description h4{
+      font-size: 1.6rem;
+      color: #eee678;
+      margin-top: 2rem;
+    }
+    .service-description p{
+      font-size: 1rem;
+      color: white;
+    }
+    .review-card {
+      background: #1e1e1e;
+      padding: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    .review-card h4 {
+      margin-bottom: 0.2rem;
+      font-size: 1.1rem;
+      color: #eef895;
+    }
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+    .whatsapp-button:hover {
+      background-color: #20b858;
+    }
+    @media(max-width: 600px) {
+      header h1, .section-title {
+        font-size: 1.25rem;
+      }
+    }
